@@ -20,3 +20,12 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+
+.login-form {
+    margin-top: 50px;
+    padding: 80px;
+    border: 1px solid black;
+    box-shadow: #adb5bd 5px 10px;
+    border-radius : 5px
+}

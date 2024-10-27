@@ -47,6 +47,18 @@ namespace ShoppingNow.Infrastructure.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "cd5152fd-86fa-4249-83e0-618a420a32b6",
+                            Name = "Customer"
+                        },
+                        new
+                        {
+                            Id = "81f416be-9cb9-4c02-9f5e-cd8cd6b21ff0",
+                            Name = "Admin"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -231,6 +243,24 @@ namespace ShoppingNow.Infrastructure.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "c7d15af3-1f1a-4959-981b-bfe08ccd38b9",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "57a71f60-5edc-4817-8ac9-eb3e90bf15d6",
+                            Createdat = new DateOnly(2024, 10, 27),
+                            Email = "Admin",
+                            EmailConfirmed = false,
+                            FirstName = "Ahmed",
+                            LastName = "Saied",
+                            LockoutEnabled = false,
+                            PasswordHash = "Admin123",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "c7eb83f8-6056-4156-a7e9-82e69848d87c",
+                            TwoFactorEnabled = false
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

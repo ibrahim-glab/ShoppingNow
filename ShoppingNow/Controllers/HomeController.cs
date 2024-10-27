@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using ShoppingNow.Models;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ShoppingNow.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

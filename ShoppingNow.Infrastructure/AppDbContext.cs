@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using ShoppingNow.core.Entities;
 
@@ -13,7 +14,22 @@ namespace ShoppingNow.Infrastructure
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            base.OnModelCreating(builder);
+            builder.Entity<ApplicationUser>().HasData(
+                new ApplicationUser()
+                {
+                    FirstName = "Ahmed",
+                    LastName = "Saied",
+                    UserName = "Admin",
+                    PasswordHash = "Admin123"
+                });
+            builder.Entity<IdentityRole>().HasData(new IdentityRole
+            {
+                Name = "Customer",
+            },new IdentityRole
+            {
+                Name = "Admin"
+            });
+        base.OnModelCreating(builder);
         }
     }
 }

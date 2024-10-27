@@ -18,6 +18,5 @@ namespace ShoppingNow.core.Entities
         [MaxLength(20)]
         public string LastName { get; set; }
         public DateOnly Createdat { get; set; } = DateOnly.FromDateTime(DateTime.Now);
-
     }
 }
