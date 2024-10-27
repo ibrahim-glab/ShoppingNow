@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace ShoppingNow.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Customer")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
